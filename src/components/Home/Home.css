@@ -17,3 +17,13 @@
 .App.dark .aboutMe {
     color: var(--gray-color);
 }
+
+@media screen and (max-width:600px) {
+    .aboutMe {
+        font-weight: bold;
+        font-size: 20px;
+        margin: 50px 0px;
+        line-height: 40px;
+        color: #373a3c;
+    }
+}
