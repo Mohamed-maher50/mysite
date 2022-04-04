@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/Home/Home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Projects from "./components/Projects/Projects";
+import Project from "./components/project/Project";
+import Href from './hrefs/Href'
+import IconMode from "./components/icon/IconMode";
+import { useState } from "react";
+let classNameApp = "App dark";
+
 
 function App() {
+  let [DarkMode,SetDarkMode] =useState(true);
+  DarkMode?classNameApp="App dark" :classNameApp="App";
+
+  let changeMode = ()=>{
+    SetDarkMode(!DarkMode)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className={classNameApp}>
+      <Routes>
+        <Route path="/" element={
+          <>
+                   <Navbar />
+                   <Home />
+                   <Projects hrefs={Href}/>
+                   <IconMode changeMode={changeMode} mode={DarkMode}/>
+          </>
+        }/>
+
+        <Route path="/project/:id" element={<Project  hrefs={Href}/>}/>
+      </Routes>
+     
+      </div>
+
+      
+    </BrowserRouter>
   );
 }
 

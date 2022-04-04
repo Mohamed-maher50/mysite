@@ -1,0 +1,19 @@
+.myName {
+    color: var(--main-color);
+}
+
+.aboutMe {
+    font-weight: bold;
+    font-size: 30px;
+    width: 75%;
+    margin: 50px 0px;
+    line-height: 35px;
+    color: #373a3c;
+}
+
+
+/* dark mode */
+
+.App.dark .aboutMe {
+    color: var(--gray-color);
+}

@@ -1,0 +1,46 @@
+.myProjects {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 30px;
+}
+
+.project {
+    overflow: hidden;
+}
+
+.project img {
+    height: 350px;
+    width: 100%;
+}
+
+@media screen and (max-width:600px) {
+    .myProjects {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        gap: 30px;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .myProjects {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 30px;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .myProjects {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        gap: 30px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .myProjects {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 30px;
+    }
+}

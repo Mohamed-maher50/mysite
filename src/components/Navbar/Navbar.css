@@ -1,0 +1,154 @@
+nav {
+    padding: 10px;
+}
+
+nav .logo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 50%;
+}
+
+nav .logo img {
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+nav .logo .name {
+    display: inline-block;
+    font-family: var(--main-font);
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.subnav {
+    display: flex;
+}
+
+.subnav ul {
+    display: flex;
+    justify-content: end;
+    width: 50%;
+    transition: .4s ease-in-out;
+}
+
+.subnav ul .nav-link {
+    line-height: 60px;
+    margin: 0px 10px;
+    font-size: 19px;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.subnav ul .nav-link:hover::after {
+    width: 100%;
+}
+
+.subnav ul .nav-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    transition: .5s;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-bottom: 5px solid #2D2D2D;
+    opacity: .5;
+}
+
+
+/* dark mode */
+
+.App.dark .name {
+    color: #fff;
+}
+
+.App.dark .subnav ul .nav-link {
+    color: #fff;
+}
+
+.nav-icon {
+    position: absolute;
+    top: 0px;
+    right: 70px;
+    color: var(--dark) !important;
+    display: none;
+}
+
+.App.dark .nav-icon {
+    color: #fff !important;
+}
+
+.fa-times {
+    transform: rotate(0deg);
+    transition: .5s;
+}
+
+.active-icon {
+    transform: rotate(360deg);
+}
+
+
+/* media */
+
+@media screen and (max-width:992px) {
+    .nav-icon {
+        position: absolute;
+        top: 15px;
+        right: 70px;
+        display: block;
+        z-index: 11;
+        font-size: 30px;
+        padding: 10px;
+        cursor: pointer;
+    }
+    .subnav {
+        overflow: hidden;
+    }
+    .subnav ul {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 0px !important;
+        height: 0px !important;
+        overflow: hidden;
+    }
+    .subnav ul.active .nav-link {
+        opacity: 0;
+        transition: .5s;
+        color: #fff;
+    }
+    .subnav ul.active {
+        width: 100% !important;
+        height: 110% !important;
+        position: fixed;
+        background-color: var(--dark);
+        z-index: 10;
+        font-size: 40px;
+        border-radius: 0;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+    }
+    .subnav ul.active .nav-link {
+        display: block;
+        opacity: 1;
+        color: #fff;
+    }
+    .subnav ul.active~.nav-icon {
+        color: #fff !important;
+        position: fixed;
+    }
+}
