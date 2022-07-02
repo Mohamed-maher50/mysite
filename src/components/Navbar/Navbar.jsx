@@ -19,7 +19,7 @@ function Navbar() {
           </div>
 
           <ul className={active ? "active":""}>
-            <NavLink to={'#'} className="nav-link active">Home</NavLink>
+            <NavLink to={'#'} className="nav-link ">Home</NavLink>
             <NavLink to={'#'} className="nav-link">Writing</NavLink>
             <NavLink to={'#'} className="nav-link">About</NavLink>
             

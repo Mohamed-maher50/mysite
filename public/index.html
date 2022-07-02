@@ -38,6 +38,23 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <div id="custom-cursor" class="custom-cursor"></div>
+    <script>
+     
+      
+      let cursor = document.getElementById('custom-cursor');
+      document.addEventListener('mousemove',(e)=>{
+         cursor.style.left = `${e.pageX}px`
+         cursor.style.top = `${e.pageY}px`
+      });
+
+      document.addEventListener('click',()=>{
+        cursor.classList.add("clicked");
+        setTimeout(()=>{
+          cursor.classList.remove('clicked')
+        },600)
+      })
+    </script>
 </body>
 
 </html>
