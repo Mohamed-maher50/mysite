@@ -17,6 +17,9 @@ body {
     
 }
 
+.text-center{
+    text-align: center;
+}
 .container {
     width: 75%;
     margin: auto;
@@ -31,7 +34,11 @@ body {
     margin: 0;
     color: var(--light-gray);
 }
-
+.set_title{
+    font-size: 35px;
+    font-weight: bold;
+    padding: 30px 0px;
+}
 .custom-cursor{
     position: absolute;
     top:0;
@@ -43,13 +50,16 @@ body {
     pointer-events: none;
     transform: translate(-50%,-50%);
     transition: box-shadow .1s ease;
+    z-index: 100000000000;
     
 }
 
 .clicked{
     box-shadow: inset 15px 0px  0px rgb(0, 157, 255);   
 }
-
+.p_box{
+    padding: 50px;
+}
 /* dark mode */
 
 .App.dark .h-large {

@@ -8,7 +8,7 @@ function Project(props) {
     return urls.id === +id
   })
   
-  console.log(link)
+  
   return (
     <iframe src={link.url} style={{"width":"100%","height":"100vh"}}></iframe>
   )

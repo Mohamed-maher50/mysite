@@ -14,14 +14,14 @@ function Navbar() {
         <div className="subnav">
           <div className="logo">
             <img src="../imgs/156941914_2972220119767233_5127668877390390328_n.jpg" />
-            <span className="name">mohamed maher</span>
+            <span className="name">Mohamed Maher</span>
             
           </div>
 
           <ul className={active ? "active":""}>
-            <NavLink to={'#'} className="nav-link ">Home</NavLink>
+            <NavLink to={'/'} className="nav-link ">Home</NavLink>
             <NavLink to={'#'} className="nav-link">Writing</NavLink>
-            <NavLink to={'#'} className="nav-link">About</NavLink>
+            <NavLink to={'/about'} className="nav-link">About</NavLink>
             
           
           </ul>

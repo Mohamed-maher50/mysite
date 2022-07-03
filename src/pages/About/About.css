@@ -1,0 +1,33 @@
+.About_info{
+    display: flex;
+    padding: 30px 10px ;
+    margin-top: 20px;
+}
+.About_info .About_box{
+    font-size:35px;
+    text-transform: capitalize;
+    font-family: var(--main-font);
+    font-weight: bold;
+    color:#373a3c;
+
+  
+}
+.App.dark .About_info .About_box{
+    color: #fff;
+ 
+  
+}
+@media screen and (max-width:1200px) {
+
+    .About_info{
+        display: block;
+    
+    }
+    .About_info .About_box img{
+        width: 100%;
+
+    }
+    .About_info .About_box{
+        font-size:25px;
+    }
+}

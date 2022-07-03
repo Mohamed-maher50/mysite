@@ -40,14 +40,14 @@
     -->
     <div id="custom-cursor" class="custom-cursor"></div>
     <script>
-     
+     function effectCursor (e){
+      cursor.style.left = `${e.pageX}px`
+         cursor.style.top = `${e.pageY}px`
+     }
       
       let cursor = document.getElementById('custom-cursor');
-      document.addEventListener('mousemove',(e)=>{
-         cursor.style.left = `${e.pageX}px`
-         cursor.style.top = `${e.pageY}px`
-      });
-
+      document.addEventListener('mousemove',effectCursor);
+     document.addEventListener("scroll",effectCursor)
       document.addEventListener('click',()=>{
         cursor.classList.add("clicked");
         setTimeout(()=>{

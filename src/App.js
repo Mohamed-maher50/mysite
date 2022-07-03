@@ -6,6 +6,7 @@ import Projects from "./components/Projects/Projects";
 import Project from "./components/project/Project";
 import Href from "./hrefs/Href";
 import IconMode from "./components/icon/IconMode";
+import About from "./pages/About/About"
 import { useState } from "react";
 let classNameApp = "App dark";
 
@@ -31,7 +32,13 @@ function App() {
               </>
             }
           />
-
+          <Route path="/about" element={
+            <>
+            <Navbar/>
+            <About/>
+              <IconMode changeMode={changeMode} mode={DarkMode}/>
+            </>
+          }/>
           <Route path="/project/:id" element={<Project hrefs={Href} />} />
         </Routes>
       </div>

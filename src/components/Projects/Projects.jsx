@@ -26,8 +26,8 @@ let hrefs = [
 function projects(props) {
   return (
     <div className="container">
-      <div>Featured Projects</div>
-      <div className="myProjects">
+      <div className="set_title">Featured Projects</div>
+      <div className="myProjects ">
         {props.hrefs.map((project) => {
           return (
             <>
