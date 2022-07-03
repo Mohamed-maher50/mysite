@@ -81,12 +81,12 @@ nav .logo .name {
     position: absolute;
     top: 0px;
     right: 30px;
-    color: var(--dark) !important;
+    color: var(--dark) ;
     display: none;
 }
 
 .App.dark .nav-icon {
-       color: var(--main-color) ;
+       color: var(--main-color) !important;
 }
 .App.dark .subnav ul .nav-link:hover {
     color: var(--main-color) ;
