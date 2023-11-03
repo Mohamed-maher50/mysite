@@ -13,7 +13,7 @@ function Navbar() {
       <div className="container">
         <div className="subnav">
           <div className="logo">
-            <img src="../imgs/156941914_2972220119767233_5127668877390390328_n.jpg" />
+            <img src="/imgs/156941914_2972220119767233_5127668877390390328_n.jpg" />
             <span className="name">Mohamed Maher</span>
           </div>
 

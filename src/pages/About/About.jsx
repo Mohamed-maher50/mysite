@@ -10,7 +10,7 @@ function About() {
       <div className="About_info">
         <div className="About_box">
           <img
-            src="../imgs/156941914_2972220119767233_5127668877390390328_n.jpg"
+            src="/imgs/156941914_2972220119767233_5127668877390390328_n.jpg"
             width={600}
             height={600}
             alt="mohamed maher img"

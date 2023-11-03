@@ -19,9 +19,9 @@ function Skills() {
       <div className="container">
         <h3 className="set_title">Skills</h3>
         <div className="skills ">
-          {skills.map((skill) => {
+          {skills.map((skill, index) => {
             return (
-              <div className="skills_box">
+              <div className="skills_box" key={index}>
                 <div key={skill.id} className="skill_title">
                   {skill.title_skills}
                 </div>

@@ -28,13 +28,15 @@ function projects(props) {
     <div className="container">
       <div className="set_title">Featured Projects</div>
       <div className="myProjects ">
-        {props.hrefs.map((project) => {
+        {props.hrefs.map((project, index) => {
           return (
-            <>
-              <Link to={`/project/${project.id}`}  className="col project" key={project.id}>
-                <img src={`../imgs/${project.imgUrl}`} />
-              </Link>
-            </>
+            <Link
+              to={`/project/${project.id}`}
+              className="col project"
+              key={index}
+            >
+              <img src={`/imgs/${project.imgUrl}`} />
+            </Link>
           );
         })}
       </div>
